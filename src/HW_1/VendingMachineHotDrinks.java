@@ -1,4 +1,5 @@
 package HW_1;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +45,8 @@ public class VendingMachineHotDrinks implements VendingMachine {
     public String getProduct(String name) {
         resultFind.clear();
         for (HotDrinks el : hotDrinksList) {
-            if (el.getName().equals(name)) resultFind.add(el);
+            if (el.getName().equals(name))
+                resultFind.add(el);
         }
         return resultFind.toString();
     }
@@ -57,7 +59,8 @@ public class VendingMachineHotDrinks implements VendingMachine {
     public String getProduct(BigDecimal price) {
         resultFind.clear();
         for (HotDrinks el : hotDrinksList) {
-            if (el.getPrice().compareTo(price) <= 0) resultFind.add(el);
+            if (el.getPrice().compareTo(price) <= 0)
+                resultFind.add(el);
         }
         return resultFind.toString();
     }
@@ -70,7 +73,8 @@ public class VendingMachineHotDrinks implements VendingMachine {
     public String getProduct(int temp) {
         resultFind.clear();
         for (HotDrinks el : hotDrinksList) {
-            if (el.getTemp() <= temp) resultFind.add(el);
+            if (el.getTemp() <= temp)
+                resultFind.add(el);
         }
         return resultFind.toString();
     }
